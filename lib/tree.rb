@@ -72,6 +72,8 @@ class Tree
   #   block_given? ? nil : result.flatten
   # end
   
+  # More traditional version of level_order_rec implemented below.
+
   def level_order_rec
     h = tree_height
     result = []
@@ -131,6 +133,8 @@ class Tree
   #   return false unless balanced?(curr.left) && balanced?(curr.right)
   #   true
   # end
+  
+  # More efficient version of balanced? implemented below.
   
   def balanced?
     balanced_rec(@root) != -1
